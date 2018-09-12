@@ -1,27 +1,13 @@
 {
-	"name": "gulpset-skeleton",
+	"name": "webpackset",
 	"version": "1.0.0",
-	"description": "Gulp based project skeleton with modular tasks.",
-	"main": "gulpfile.js",
-	"author": "Nobuyuki NISHIGAKI",
+	"description": "Webpack based project skeleton with modular tasks.",
+	"main": "webpack.config.js",
+	"author": "Nobuyuki NISHIGAKI, Takuya ABE",
 	"license": "MIT",
-	"devDependencies": {
-		"babel-eslint": "^9.0.0",
-		"cross-env": "^5.1.4",
-		"eslint": "^5.5.0",
-		"eslint-config-prettier": "^3.0.1",
-		"eslint-plugin-prettier": "^2.6.2",
-		"glob": "^7.1.2",
-		"gulp": "^4.0.0",
-		"gulp-changed": "^3.2.0",
-		"gulp-load-plugins": "^1.5.0",
-		"gulp-plumber": "^1.2.0",
-		"gulp-task-doc": "^1.0.11",
-		"gulp-util": "^3.0.8",
-		"prettier": "^1.14.2"
-	},
+	"devDependencies": {},
 	"dependencies": {
-		"auto-install": "^1.7.4"
+		"webpack-merge": "^4.1.4"
 	},
 	"directories": {
 		"doc": "docs"
@@ -32,16 +18,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/fourdigitdesign/gulpset.git"
+		"url": "git+https://github.com/fourdigit/webpackset.git"
 	},
 	"keywords": [
-		"gulp",
+		"webpack",
 		"skeleton",
 		"modular",
 		"tasks"
-	],
-	"bugs": {
-		"url": "https://github.com/fourdigitdesign/gulpset/issues"
-	},
-	"homepage": "https://github.com/fourdigitdesign/gulpset#readme"
+	]
 }
