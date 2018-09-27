@@ -1,7 +1,7 @@
 import globule from 'globule';
 
 
-interface EntriesList {
+export interface EntriesList {
   [targetName: string]: string;
 }
 
@@ -10,15 +10,15 @@ interface EntriesList {
  * @param srcType
  * @param targetType
  */
-export const getEntriesList = (srcType: string = 'js', targetType: string = 'js'): EntriesList => {
+export const getEntriesList = (srcType: string = 'ejs', targetType: string = 'html'): EntriesList => {
   const entriesList = {};
-  const filesMatched = globule.find([`**/*.${srcType}`, `!**/_*.${srcType}`], { cwd : `${__dirname}/src` });
+  const filesMatched = globule.find([`**/*.${srcType}`, `!**/_*.${srcType}`], { cwd : `${process.cwd()}/src` });
 
   for(const srcName of filesMatched) {
     const targetName = srcName.replace(new RegExp(`.${srcType}$`, 'i'), `.${targetType}`);
-    entriesList[targetName] = `${__dirname}/src/${srcName}`;
+    entriesList[targetName] = `${process.cwd()}/src/${srcName}`;
   }
 
-  console.log(entriesList);
+  console.info(`${srcType} compile targets`, entriesList);
   return entriesList;
 }
