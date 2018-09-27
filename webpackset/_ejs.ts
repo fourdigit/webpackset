@@ -5,8 +5,10 @@ export const ejs = () => {
   const htmlSettings = [];
   const entryList = getEntriesList('ejs', 'html');
   Object.keys(entryList).forEach(targetName => {
+    const _targetNameWithoutPages = targetName.replace('pages/', '');
+    console.log(_targetNameWithoutPages);
     const plugin = new HtmlWebpackPlugin({
-      filename : targetName,
+      filename : _targetNameWithoutPages,
       template : entryList[targetName]
     })
     htmlSettings.push(plugin);

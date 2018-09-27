@@ -24,6 +24,13 @@ const commonConfig = merge([
     module: {
       rules: [
         {
+          test : /\.ejs$/,
+          use  : [
+            'html-loader',
+            'ejs-html-loader'
+          ]
+        },
+        {
           test: /\.(jpe?g|png|gif|svg)$/,
           loader: 'file-loader',
           options: {
